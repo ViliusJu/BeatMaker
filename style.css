@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background-color: #12d018;
+}
+
+.kick-pad.active {
+  background-color: #065c09;
+}
+
+.snare-pad {
+  background-color: #dc6363;
+}
+
+.snare-pad.active {
+  background-color: #f31111;
+}
+
+.hihat-pad {
+  background-color: #6e94da;
+}
+
+.hihat-pad.active {
+  background-color: #1232e6;
+}
+
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background-color: #49484e;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.pad {
+  transition: all ease 0.5s;
+}
+
+.play {
+  padding: 1rem 2rem;
+  margin: 3rem;
+  font-size: 1.5rem;
+  background-image: linear-gradient(195deg, #eee7e7 0%, #49484e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.mute.active {
+  background-color: #9d9a9a;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 1rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background-color: rgb(36, 31, 31);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  text-align: center;
+}
